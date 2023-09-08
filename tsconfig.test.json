@@ -1,0 +1,7 @@
+{
+  "include": ["test"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext"
+  }
+}
