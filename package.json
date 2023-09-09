@@ -1,13 +1,32 @@
 {
   "name": "replace-lockfile-registry",
   "version": "0.0.1",
+  "description": "Replace registry of `package-lock.json`, `yarn.lock` and `pnpm-lock.yaml`.",
+  "keywords": [
+    "lockfile",
+    "npm",
+    "pnpm",
+    "registry",
+    "replace",
+    "yarn"
+  ],
+  "homepage": "https://github.com/zjffun/replace-lockfile-registry#readme",
+  "bugs": {
+    "url": "https://github.com/zjffun/replace-lockfile-registry/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zjffun/replace-lockfile-registry.git"
+  },
+  "license": "MIT",
+  "author": "Jufeng Zhang <zjffun@gmail.com>",
   "type": "module",
-  "bin": "./dist/cli.js",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "repository": "git@github.com:zjffun/replace-lockfile-registry.git",
-  "author": "Jufeng Zhang <zjffun@gmail.com>",
-  "license": "MIT",
+  "bin": "./dist/cli.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prepublishOnly": "npm run build && npm run test",
     "start": "npm run watch",
@@ -16,9 +35,6 @@
     "test": "NODE_ENV=test TS_NODE_PROJECT=tsconfig.test.json NODE_OPTIONS='--loader ts-node/esm' c8 --reporter=lcov mocha 'tests/**/*.test.ts'",
     "fix-registry": "replace-lockfile-registry --registry https://registry.npmjs.org/"
   },
-  "files": [
-    "dist"
-  ],
   "dependencies": {
     "commander": "^9.3.0"
   },
