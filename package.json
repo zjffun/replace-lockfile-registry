@@ -13,7 +13,7 @@
     "start": "npm run watch",
     "build": "rimraf dist && tsc",
     "watch": "tsc --watch",
-    "test": "TS_NODE_PROJECT=tsconfig.test.json NODE_OPTIONS='--loader ts-node/esm' c8 --reporter=lcov mocha 'tests/**/*.ts'"
+    "test": "NODE_ENV=test TS_NODE_PROJECT=tsconfig.test.json NODE_OPTIONS='--loader ts-node/esm' c8 --reporter=lcov mocha 'tests/**/*.test.ts'"
   },
   "files": [
     "dist"
@@ -23,12 +23,14 @@
   },
   "devDependencies": {
     "@types/chai": "^4.3.6",
+    "@types/fs-extra": "^11.0.1",
     "@types/mocha": "^10.0.1",
     "@types/node": "^20.5.9",
     "c8": "^8.0.1",
     "chai": "^4.3.8",
     "codecov": "^3.8.3",
     "cross-env": "^7.0.3",
+    "fs-extra": "^11.1.1",
     "mocha": "^10.2.0",
     "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
