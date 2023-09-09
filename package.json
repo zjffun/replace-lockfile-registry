@@ -1,6 +1,6 @@
 {
   "name": "replace-lockfile-registry",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Replace registry of `package-lock.json`, `yarn.lock` and `pnpm-lock.yaml`.",
   "keywords": [
     "lockfile",
