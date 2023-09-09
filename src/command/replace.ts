@@ -19,7 +19,6 @@ const resolveLockfile = (value, dummyPrevious) => {
 
 export default function (program: Command) {
   program
-    .command("update")
     .option(
       "--lockfile <string...>",
       "lockfile, eg: ./package-lock.json ./yarn.lock",
