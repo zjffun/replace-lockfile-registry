@@ -17,6 +17,14 @@
       "request": "launch",
       "skipFiles": ["<node_internals>/**"],
       "type": "node"
+    },
+    {
+      "name": "CLI",
+      "program": "${workspaceFolder}/dist/cli.js",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node",
+      "args": ["--lockfile", "./package-lock.json", "./yarn.lock"]
     }
   ]
 }

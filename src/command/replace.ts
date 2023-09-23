@@ -6,13 +6,9 @@ import getNpmRegistry from "../core/getNpmRegistry.js";
 import replaceLockfileRegistry from "../core/replaceLockfileRegistry.js";
 
 const resolveLockfile = (value, dummyPrevious) => {
-  if (!Array.isArray(value)) {
-    return [];
-  }
+  const previous = dummyPrevious || [];
 
-  const result = value.map((item) => {
-    return path.resolve(process.cwd(), item);
-  });
+  const result = [...previous, path.resolve(process.cwd(), value)];
 
   return result;
 };
